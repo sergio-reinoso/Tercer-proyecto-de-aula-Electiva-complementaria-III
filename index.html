@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Aula Tercera Enterga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQ==/libraries/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e8e8e8;
+        }
+        .form-area {
+            padding-top: 7%;
+        }
+        .row.single-form {
+            box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+        }
+        .left {
+            background: blueviolet;
+            padding: 200px 98px;
+        }
+        .left h2 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 48px;
+        }
+        .left h2 span {
+            font-weight: 100;
+        }
+        .single-form{
+            background: #fff;
+        }
+        .right {
+            padding: 70px 100px;
+            position: relative;
+        }
+        .right i {
+            position: absolute;
+            font-size: 80px;
+            left: -27px;
+            top: 40%;
+            color: #fff;
+        }
+        .form-control {
+            border: 2px solid #000;
+        }
+        .right button {
+            border: none;
+            border-radius: 0;
+            background: #252525;
+            width: 180px;
+            color: #fff;
+            padding: 15px 0;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .right button:hover{
+            background-color: #252525;
+        }
+        /*responsive*/
+        @media (min-width:768px) and (max-width:991px){
+            .right i {
+                top: -52px;
+                transform: rotate(90deg);
+                left: 50%;
+            }
+        }
+        @media (max-width:767px){
+            .left {
+                padding: 90px 15px;
+                text-align: center;
+            }
+            .left h2 {
+                font-size: 25px;
+            }
+            .right {
+                padding: 25px;
+            }
+            .right i {
+                top: -52px;
+                transform: rotate(90deg);
+                left: 46%;
+            }
+            .right button {
+                width: 150px;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Colombia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#galeria">Galeria</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Proyectos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./metro.html">Metro de Bogotá</a></li>
+                  <li><a class="dropdown-item" href="./cristales.html">Caño Cristales</a></li>
+                  <li><a class="dropdown-item" href="./carnaval.html">Carnaval de Barranquilla</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!-- Barra de navegacion -->
+
+    <!-- Carusel de imagenes -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ytimg.com/vi/NjbRrRfyvW4/maxresdefault.jpg" class="d-block w-100 h-90" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://expotur-eco.com/wp-content/uploads/2018/03/ca%C3%B1o-cristales-rio-colombia-1.jpg" class="d-block w-100 h-90" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.eltiempo.com/files/article_main_1200/uploads/2023/09/08/64fb8b0a52608.jpeg" class="d-block w-100 h-90" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carusel de imagenes -->
+    <hr>
+    <!-- Gallery -->
+    <div class="text-center" id="galeria">
+        <h2>Proyectos</h2>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <h4 class="text-center">Metro de Bogotá</h4>
+            <a href="./metro.html">
+                <img
+                    src="https://bogota.gov.co/sites/default/files/styles/1050px/public/2020-10/centro-histrico-3_47839788682_o.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water"
+                />
+            </a>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="text-center">Caño Cristales</h4>
+            <a href="./cristales.html">
+                <img
+                    src="https://elclavo.com/wp-content/uploads/2022/07/cano_cristales_colombia_1.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Mountains in the Clouds"
+                />
+            </a>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4 class="text-center">Carvnaval de Barranquilla</h4>
+          <a href="./carnaval.html">
+            <img
+                src="https://hotelsantorini.com.co/wp-content/uploads/2022/08/Blog-santorini_PORTADA-1024x576-1.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+            />
+        </a>
+        </div>
+    </div>
+    <!-- Gallery -->
+
+    <!-- Formulario de contacto -->
+    <div class="form-area">
+        <div class="container">
+            <div class="row single-form g-0">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="left">
+                        <h2><span>Contacto</span> <br>Electiva Complementaria</h2>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="right">
+                       <i class="fa fa-caret-left"></i>
+                        <form>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Comentarios</label>
+                              <textarea type="password" class="form-control" id="exampleInputPassword1"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Formulario de contacto -->
+    <br>
+    <br>
+    <br>
+    <!-- footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-white" href="#">Protecto realizado por Sergio Reinoso</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- footer -->
+
+    <!-- Links de Bootstrap de JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
